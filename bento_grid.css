@@ -1,0 +1,156 @@
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+.container-grid {
+    max-width: 80%;
+    margin-inline: auto;
+    margin-top: 2em;
+    padding: 2em;
+    display:grid;
+    grid-template-areas: 
+    'create-schedule social-media-faster social-media-faster schedule-to-social-media'
+    'create-schedule manage-multiple-accounts maintain-posting-schedule schedule-to-social-media'
+    'write-content-ai manage-multiple-accounts maintain-posting-schedule schedule-to-social-media'
+    'write-content-ai faster-audience-growth grow-followers grow-followers';
+    grid-template-rows: 1fr 0.25fr 0.75fr 1fr;
+    gap: 0.75em;
+}
+
+.item {
+    border-radius: 20px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+   width: 100%;
+   object-fit:fill; 
+}
+
+
+p {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+.text-left {
+    text-align: start;
+}
+
+.create-schedule {
+    grid-area: create-schedule;
+    background-color: rgb(251, 241, 228);
+}
+
+.social-media-faster {
+    grid-area: social-media-faster;
+    background-color: purple;
+}
+
+.schedule-to-social-media {
+    grid-area: schedule-to-social-media;
+    background-color: rgb(225, 166, 252);
+    padding-right: 0;
+}
+
+.manage-multiple-accounts {
+    grid-area:manage-multiple-accounts;
+    background-color: white;
+}
+
+.maintain-posting-schedule{
+    grid-area: maintain-posting-schedule;
+    background-color: bisque;
+}
+
+.write-content-ai {
+    grid-area: write-content-ai;
+    background-color: bisque;
+}
+
+.faster-audience-growth {
+    grid-area: faster-audience-growth;
+    background-color: white;
+}
+
+.faster-audience-growth p {
+    font-size: 0.5em;
+}
+
+.faster-audience-growth h2 {
+    font-size: 4em;
+}
+
+.item.grow-followers {
+    flex-direction: row;
+    grid-area:grow-followers;
+    background-color: purple;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.purple {
+    color: purple;
+}
+
+.orange {
+    color: orange;
+}
+
+.white {
+    color: white;
+}
+
+@media (max-width:568px) {
+    .container-grid {
+        grid-template-areas: 
+        'social-media-faster'
+        'manage-multiple-accounts'
+        'maintain-posting-schedule'
+        'schedule-to-social-media'
+        'grow-followers'
+        'faster-audience-growth'
+        'create-schedule'
+        'write-content-ai';
+        margin-top: 0;
+        margin-inline: 0;
+        width: 100%;
+        grid-template-rows: 1fr 0.30fr 0.70fr 1.20fr 1fr 0.80fr 0.90fr 1fr;
+    }
+
+    .text-left {
+        text-align: center;
+    }
+
+    .item {
+        padding: 2em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .item.grow-followers {
+        flex-direction: column;
+    }
+    
+}
